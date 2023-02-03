@@ -85,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         obscureText: true,
                         obscuringCharacter: '*',
                         controller: passwordController,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                             hintText: 'Password',
                             helperText: 'enter password',
                             prefixIcon: Icon(Icons.lock_outline)
@@ -100,7 +100,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   )
               ),
             ),
-            SizedBox(height: 50,),
+            const SizedBox(height: 50,),
             RoundButton(title: 'Login',onTap: () {
               if(_formKey.currentState!.validate()){
                 login();
