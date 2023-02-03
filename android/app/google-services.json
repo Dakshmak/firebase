@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "543718584936",
+    "project_id": "fir-accab",
+    "storage_bucket": "fir-accab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:543718584936:android:58d41f366a7ccc490781dd",
+        "android_client_info": {
+          "package_name": "com.forefront.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "543718584936-7819e7pvlljvgabjuf45p5fde10up6hq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBo2H09FDv5CYiAMbQHBU9sp2Ox4swcivo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "543718584936-7819e7pvlljvgabjuf45p5fde10up6hq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
