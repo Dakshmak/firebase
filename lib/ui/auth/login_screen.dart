@@ -15,6 +15,7 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
 
+  bool loding = false;
   final _formKey = GlobalKey<FormState>();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
@@ -34,10 +35,16 @@ class _LoginScreenState extends State<LoginScreen> {
         email: emailController.text.toString(),
         password: passwordController.text.toString()
     ).then((value) {
+      setState(() {
+        loding = false;
+      });
       Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomeScreen(),));
     }).onError((error, stackTrace) {
       debugPrint(error.toString());
       utils().toastMessage(error.toString());
+      setState(() {
+        loding = false;
+      });
     });
 
   }
@@ -101,8 +108,14 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             const SizedBox(height: 50,),
-            RoundButton(title: 'Login',onTap: () {
+            RoundButton(
+              title: 'Login',
+              loding: loding,
+              onTap: () {
               if(_formKey.currentState!.validate()){
+                setState(() {
+                  loding = true;
+                });
                 login();
               }
             },),
